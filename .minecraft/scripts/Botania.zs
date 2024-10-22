@@ -53,12 +53,21 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "input": {
     "tag": "forge:ingots/cast_iron"
   },
-  "mana": 3000,
+  "mana": 6000,
   "output": {
     "item": "botania:manasteel_ingot"
   }
 });    
-
+<recipetype:botania:mana_infusion>.addJsonRecipe("mana_infusion_manasteel_ingot_wrought", {
+  "type": "botania:mana_infusion",
+  "input": {
+    "tag": "forge:ingots/wrought_iron"
+  },
+  "mana": 3000,
+  "output": {
+    "item": "botania:manasteel_ingot"
+  }
+});
 
 
 <recipetype:tfc:anvil>.addJsonRecipe("anvil_manasteel_axe", {
@@ -69,7 +78,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_axe"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "punch_last",
     "hit_second_last",
@@ -85,7 +94,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_hoe"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "punch_last",
     "hit_not_last",
@@ -101,7 +110,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_knife"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "hit_last",
     "draw_second_last",
@@ -117,7 +126,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_pick"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "punch_last",
     "bend_not_last",
@@ -133,7 +142,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_shovel"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "punch_last",
     "hit_not_last"
@@ -148,7 +157,7 @@ craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader
   "result": {
     "item": "kubejs:manasteel_sword"
   },
-  "tier": 3,
+  "tier": 2,
   "rules": [
     "hit_last",
     "bend_second_last",
@@ -187,13 +196,15 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
   "second_input": {
     "item": "kubejs:manasteel_knife"
   },
-  "tier": 3,
+  "tier": 2,
   "result": {
     "item": "botania:manasteel_shears"
   }
 });
 
 <recipetype:botania:runic_altar>.removeAll();
+
+
 
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_air", {
   "type": "botania:runic_altar",
@@ -202,13 +213,16 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:mana_dusts"
     },
     {
-      "item": "tfc:wool"
+      "tag": "botania:manasteel_ingots"
+    },
+    {
+      "tag": "forge:string"
     },
     {
       "tag": "forge:feathers"
     },
     {
-      "tag": "tfc:fluid_item_ingredient_empty_containers"
+      "tag": "tfc:glass_bottles"
     }
   ],
   "mana": 5200,
@@ -256,16 +270,16 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:manasteel_ingots"
     },
     {
-      "tag": "tfc:rock/raw"
+      "tag": "tfc:igneous_intrusive_rock"
     },
     {
-      "tag": "bsa:rock/loose"
+      "tag": "tfc:sedimentary_rock"
     },
     {
-      "tag": "bsa:rock/loose"
+      "tag": "tfc:igneous_extrusive_rock"
     },
     {
-      "tag": "forge:mushrooms"
+      "tag": "tfc:metamorphic_rock"
     }
   ],
   "mana": 5200,
@@ -289,7 +303,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
     },
     {
       "item": "minecraft:weathered_copper"
-    }    
+    }
   ],
   "mana": 12000,
   "output": {
@@ -307,7 +321,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:manasteel_ingots"
     },
     {
-      "tag": "forge:netherrack"
+      "tag": "minecraft:charcoal"
     },
     {
       "tag": "forge:gunpowder"
