@@ -119,27 +119,27 @@
 	"Hollow Logs" = true
 	"Industrial Palette" = true
 	"Japanese Palette" = true
-	"Leaf Carpet" = true
+	"Leaf Carpet" = false
 	Midori = true
 	"More Brick Types" = true
-	"More Mud Blocks" = true
+	"More Mud Blocks" = false
 	"More Potted Plants" = true
 	"Nether Brick Fence Gate" = true
 	"Rainbow Lamps" = true
 	"Raw Metal Bricks" = true
-	Rope = true
+	Rope = false
 	"Shear Vines" = true
 	Shingles = true
 	"Soul Sandstone" = true
-	Stools = true
+	Stools = false
 	"Sturdy Stone" = true
 	Thatch = true
-	"Variant Bookshelves" = true
-	"Variant Chests" = true
-	"Variant Furnaces" = true
-	"Variant Ladders" = true
+	"Variant Bookshelves" = false
+	"Variant Chests" = false
+	"Variant Furnaces" = false
+	"Variant Ladders" = false
 	"Vertical Planks" = true
-	"Vertical Slabs" = true
+	"Vertical Slabs" = false
 	"Wooden Posts" = true
 	"More Stone Variants" = true
 
@@ -345,10 +345,10 @@
 	"Bottled Cloud" = true
 	"Color Runes" = true
 	"Endermosh Music Disc" = true
-	"Parrot Eggs" = true
-	"Pathfinder Maps" = true
-	Pickarang = false
-	"Seed Pouch" = true
+	"Parrot Eggs" = false
+	"Pathfinder Maps" = false
+	Pickarang = true
+	"Seed Pouch" = false
 	"Skull Pikes" = true
 	"Slime In A Bucket" = true
 	"Torch Arrow" = true
@@ -766,21 +766,21 @@
 		"Beach Villager" = true
 
 [world]
-	"Ancient Wood" = true
-	"Azalea Wood" = true
-	"Big Stone Clusters" = true
-	"Blossom Trees" = true
+	"Ancient Wood" = false
+	"Azalea Wood" = false
+	"Big Stone Clusters" = false
+	"Blossom Trees" = false
 	"Chorus Vegetation" = true
-	Corundum = true
-	"Fairy Rings" = true
-	"Glimmering Weald" = true
+	Corundum = false
+	"Fairy Rings" = false
+	"Glimmering Weald" = false
 	"Monster Box" = true
 	"Nether Obsidian Spikes" = true
-	"New Stone Types" = true
+	"New Stone Types" = false
 	"No More Lava Pockets" = true
-	Permafrost = true
-	"Spiral Spires" = true
-	"Fallen Logs" = true
+	Permafrost = false
+	"Spiral Spires" = false
+	"Fallen Logs" = false
 
 	[world.ancient_wood]
 		"Ancient Fruit Gives Exp" = true
@@ -1347,7 +1347,7 @@
 			Dimensions = ["minecraft:overworld"]
 
 [mobs]
-	Crabs = true
+	Crabs = false
 	Forgotten = true
 	Foxhound = true
 	Shiba = true
@@ -1565,7 +1565,7 @@
 	"Soul Candles" = true
 	"Usage Ticker" = true
 	"Uses For Curses" = true
-	"Variant Animal Textures" = true
+	"Variant Animal Textures" = false
 	"Wool Shuts Up Minecarts" = true
 
 	[client.auto_walk_keybind]

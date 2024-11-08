@@ -10,25 +10,6 @@
 	#The minimum heat value required to become smouldering.
 	smouldering_heat = 80.0
 
-	#Settings for ember burner's parameters
-	[parameters.ember_burner]
-		#The max amount of ember capacity.
-		max_capacity = 6000.0
-		#The amount of ember consumed per tick.
-		ember_cost = 1.0
-		#The amount of heat gained per tick when consuming ember.
-		heating_rate = 1.0
-		#The amount of heat lost per tick when not consuming ember.
-		cooling_rate = 1.0
-		#The value to multiply on the heating rate and the cooling rate when ember burner is adjacent to atmospheric bellows.
-		rate_multiplier = 2.0
-		#The maximum heat value the ember burner can reach without atmospheric bellows.
-		max_heat = 300.0
-		#The maximum heat value the ember burner adjacent to atmospheric bellows can reach.
-		max_heat_1 = 400.0
-		#The maximum heat value the ember burner one blocks away from atmospheric bellows can reach.
-		max_heat_2 = 340.0
-
 	#Settings for electric burner's parameters
 	[parameters.electric_burner]
 		#The max amount of energy capacity.
@@ -47,4 +28,23 @@
 		max_heat = 300.0
 		#The maximum heat value the electric burner can reach after upgraded.
 		upgraded_max_heat = 400.0
+
+	#Settings for ember burner's parameters
+	[parameters.ember_burner]
+		#The max amount of ember capacity.
+		max_capacity = 6000.0
+		#The amount of ember consumed per tick.
+		ember_cost = 1.0
+		#The amount of heat gained per tick when consuming ember.
+		heating_rate = 1.0
+		#The amount of heat lost per tick when not consuming ember.
+		cooling_rate = 1.0
+		#The value to multiply on the heating rate and the cooling rate when ember burner is adjacent to atmospheric bellows.
+		rate_multiplier = 2.0
+		#The maximum heat value the ember burner can reach without atmospheric bellows.
+		max_heat = 300.0
+		#The maximum heat value the ember burner adjacent to atmospheric bellows can reach.
+		max_heat_1 = 400.0
+		#The maximum heat value the ember burner one blocks away from atmospheric bellows can reach.
+		max_heat_2 = 340.0
 

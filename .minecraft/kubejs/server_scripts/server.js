@@ -5,9 +5,8 @@
 
 TFCEvents.data(event => {
     event.knappingType('embers:caminite_blend', 2, 1, 'tfc:item.knapping.clay', false, true, true, 'embers:caminite_blend', 'kubejs:caminite')
-    event.knappingType('productivebees:wax', 2, 1, 'tfc:item.knapping.clay', false, false, true, 'productivebees:wax', 'kubejs:wax')
+ //   event.knappingType('productivebees:wax', 2, 1, 'tfc:item.knapping.clay', false, false, true, 'productivebees:wax', 'kubejs:wax')
 
-    //event.metal('kubejs:metallic_naquadah', 2000, 0.8, 'sgjourney:naquadah_alloy', null, 'kubejs:naquadah_sheet', 5, 'kubejs:naquadah')
     
 })
 
@@ -71,9 +70,9 @@ event.remove('forge:plates/gold','tfc:metal/sheet/gold')
 event.remove('forge:plates/iron','tfc:metal/sheet/wrought_iron')
 event.remove('railways:internal/plates/iron_plates','tfc:metal/sheet/wrought_iron')
 event.remove('forge:plates/obsidian','tfc:metal/sheet/steel')
-event.remove('forge:dusts/coal_coke','tfmg:coal_coke_dust')
+//event.remove('forge:dusts/coal_coke','tfmg:coal_coke_dust')
 
-event.remove('forge:ingots/iron',['betterend:thallasium_ingot','betternether:cincinnasite_ingot'])
+//event.remove('forge:ingots/iron',['betterend:thallasium_ingot','betternether:cincinnasite_ingot'])
 
 event.add('forge:storage_blocks/bronze', '#forge:storage_blocks/strong_bronze')
 event.add('forge:ingots/bronze', '#forge:ingots/strong_bronze')
@@ -85,23 +84,33 @@ event.add('tfc:usable_on_tool_rack', '#minecraft:tools')
 
 event.add('botania:seed_apothecary_reagent', '#tfc:seeds')
 
-//event.add('tfc:saws','aether:obsidian_gloves')
-//event.add('tfc:axes_that_log','aether:obsidian_gloves')
-event.add('forge:slimeballs','tfc:glue')
 
-event.add('forge:plates','railcraft:tin_plate')
-event.add('forge:plates','railcraft:zinc_plate')
-event.add('forge:plates','railcraft:bronze_plate')
-event.add('forge:plates','railcraft:invar_plate')
+event.add('forge:slimeballs','tfc:glue')
 
 event.add('forge:honeycombs','firmalife:beeswax')
 
-event.add('tfc:pileable_ingots', 'sgjourney:naquadah_alloy')
+event.add('tfc:pileable_ingots', 'minecraft:netherite_ingot')
+event.add('tfc:pileable_ingots', 'unusualend:pearlescent_ingot')
+//event.add('tfc:pileable_ingots', 'create_deco:industrial_iron_ingot')
+
+event.add('tfc:pileable_ingots', 'pneumaticcraft:ingot_iron_compressed')
 event.add('tfc:pileable_ingots', 'botania:manasteel_ingot')
+event.add('tfc:pileable_ingots', 'botania:terrasteel_ingot')
+event.add('tfc:pileable_ingots', 'botania:elementium_ingot')
+event.add('tfc:pileable_ingots', 'botania:gaia_spirit_ingot')
+//event.add('tfc:pileable_ingots', 'mysticbotany:alfsteel_ingot')
+event.add('tfc:pileable_ingots', 'botania:manasteel_ingot')
+event.add('tfc:pileable_ingots', 'embers:dawnstone_ingot')
+event.add('tfc:pileable_ingots', 'aetherworks:ingot_aether')
+
+event.add('tfc:pileable_ingots', 'alexscaves:azure_neodymium_ingot')
+event.add('tfc:pileable_ingots', 'alexscaves:scarlet_neodymium_ingot')
+
+
 //event.add(`tfc:pileable_ingots`,`#forge:ingots`)
 
-event.add('iceandfire:heal_hippocampus', '#minecraft:kelp')
-event.add('iceandfire:tempt_hippocampus', '#minecraft:kelp')
+//event.add('iceandfire:heal_hippocampus', '#minecraft:kelp')
+//event.add('iceandfire:tempt_hippocampus', '#minecraft:kelp')
 
 event.add('supplementaries:soap_dye_clean_blacklist', '#forge:glass')
 event.add('supplementaries:soap_dye_clean_blacklist', '#forge:panes/glass')
@@ -118,141 +127,39 @@ ServerEvents.tags("worldgen/biome", (event) => {
     event.add("minecraft:is_overworld", ["#tfc:overworld"])
     event.add("minecraft:is_badlands", ["tfc:inverted_badlands", "tfc:badlands"])
     event.add("minecraft:is_beach", ["tfc:shore", "tfc:tidal_flats"])
-    event.add("minecraft:is_deep_ocean", ["tfc:deep_ocean_trench", "tfc:deep_ocean","sgjourney:lantean_deep_ocean"])
+    event.add("minecraft:is_deep_ocean", ["tfc:deep_ocean_trench", "tfc:deep_ocean"])
     event.add("minecraft:is_hill", ["tfc:rolling_hills", "tfc:hills"])
     event.add("minecraft:is_mountain", ["tfc:volcanic_oceanic_mountains","tfc:old_mountains","tfc:volcanic_mountains","tfc:mountains","tfc:oceanic_mountains","tfc:highlands"])
-    event.add("minecraft:is_ocean", ["tfc:ocean", "tfc:ocean_reef","sgjourney:lantean_deep_ocean","tfc:deep_ocean_trench", "tfc:deep_ocean"])
+    event.add("minecraft:is_ocean", ["tfc:ocean", "tfc:ocean_reef","tfc:deep_ocean_trench", "tfc:deep_ocean"])
     event.add("minecraft:is_river", ["tfc:river"])
     event.add("minecraft:is_lake", ["tfc:volcanic_mountain_lake","tfc:volcanic_oceanic_mountain_lake","tfc:oceanic_mountain_lake","tfc:mountain_lake","tfc:plateau_lake","tfc:lake","tfc:old_mountain_lake"])
     event.add("minecraft:is_savanna", ["tfc:plains", "tfc:plateau"])
     event.add("minecraft:is_lowland", ["tfc:lowlands", "tfc:low_canyons"])
-    event.add("the_afterdark:has_structure/teleport_altar", ["northstar:lunar_asurine_caves"])
 
-//Tag adds "Stolen" From Below
-//https://github.com/AllTheMods/Gravitas2/blob/main/kubejs/server_scripts/tags/worldgen_biomes.js
+
+
     event.add("createpickywheels:picky_waterwheels", ["tfc:river"])
-    event.add("createpickywheels:picky_windmills", ["#aether:is_aether"])
-    event.add("botania:mystical_flower_spawnlist",["#tfc:overworld","#aether:is_aether"])
-    event.add("sgjourney:has_structure/terra_stargate_biomes",["#tfc:overworld"])
-    event.add("sgjourney:has_structure/buried_stargate/buried_stargate_biomes",["#tfc:overworld"])
-    event.add("ftbessentials:ignore_rtp",["tfc:ocean","tfc:ocean_reef","tfc:deep_ocean","tfc:deep_ocean_trench"])
-    event.add("creeperoverhaul:where_creepers_spawn",["#tfc:overworld"])
-    event.add("endermanoverhaul:cave_spawns",["#tfc:overworld"])
-    event.add("endermanoverhaul:badlands_spawns",["tfc:badlands","tfc:inverted_badlands"])
-    event.add("endermanoverhaul:coral_spawns",["tfc:ocean_reef"])
-    event.add("endermanoverhaul:savanna_spawns", ["tfc:plains", "tfc:plateau"])
-    event.add("endermanoverhaul:windswept_hills_spawns",["aether:skyroot_meadow"])
-
+    //event.add("createpickywheels:picky_windmills", ["#aether:is_aether"])
+    event.add("botania:mystical_flower_spawnlist",["#tfc:overworld"])
     event.add("minecraft:mineshaft_blocking", ["#tfc:overworld"])
     event.add("minecraft:snow_golem_melts", ["#tfc:is_volcanic"])
-    
+  /*
     event.add("additionalstructures:as_custom",["#tfc:overworld"])
     event.add("betterdeserttemples:has_structure/better_desert_temple",["tfc:inverted_badlands"])
     event.add("betteroceanmonuments:has_structure/better_ocean_monument",["tfc:deep_ocean_trench"])
     event.add("betterstrongholds:has_structure/better_stronghold",["#tfc:overworld"])
     event.add("betterwitchhuts:has_structure/better_witch_hut",["tfc:lowlands"])
     event.add("betterwitchhuts:has_structure/witch_circle",["tfc:lowlands"])
-    event.add("minecraft:has_closer_water_fog",["tfc:lowlands"])
-
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_classic>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_iberian>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_oriental>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_rustic>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_swedish>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/pillager_outpost_tudor>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_classic>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_iberian>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_mediterranean>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_nilotic>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_oriental>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_piglin>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_rustic>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_swedish>
-//    <tag:worldgen/biome:towns_and_towers:has_structure/exclusives/village_tudor>
-
-event.add("towns_and_towers:has_structure/pillager_outpost_badlands",["minecraft:is_badlands"])
-event.add("towns_and_towers:has_structure/pillager_outpost_beach",["minecraft:is_beach"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_birch_forest",["minecraft:is_birch_fores","minecraft:is_old_growth_birch_forest"])
-event.add("towns_and_towers:has_structure/pillager_outpost_deep_oceans",["minecraft:is_deep_ocean"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_desert",["minecraft:is_desert"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_flower_forest",["minecraft:is_cherry_grov","minecraft:is_flower_forest"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_forest",["minecraft:is_forest"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_grove",["minecraft:is_grove"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_jungle",["minecraft:is_jungle"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_meadow",["minecraft:is_meadow"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_mushroom_fields",["minecraft:is_mushroom_fields"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_old_growth_taiga",["minecraft:is_old_growth_pine_taig","minecraft:is_old_growth_spruce_taiga"])
-event.add("towns_and_towers:has_structure/pillager_outpost_savanna",["minecraft:is_savanna"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_savanna_plateau",["minecraft:is_savanna_plateau"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_snowy_beach",["minecraft:is_snowy_beach"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_snowy_plains",["minecraft:is_snowy_plains"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_snowy_slopes",["minecraft:is_snowy_slopes"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_snowy_taiga",["minecraft:is_snowy_taiga"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_sparse_jungle",["minecraft:is_sparse_jungle"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_sunflower_plains",["minecraft:is_sunflower_plains"])
-event.add("towns_and_towers:has_structure/pillager_outpost_swamp",["minecraft:is_lowland"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_taiga",["minecraft:is_taiga"])
-//event.add("towns_and_towers:has_structure/pillager_outpost_wooded_badlands",["minecraft:is_wooded_badlands"])
-event.add("towns_and_towers:has_structure/shallow_oceans_wreckage",["minecraft:is_ocean"])
-event.add("towns_and_towers:has_structure/village_badlands_pueblo",["minecraft:is_badlands"])
-event.add("towns_and_towers:has_structure/village_beach_lighthouse",["minecraft:is_beach"])
-//event.add("towns_and_towers:has_structure/village_birch_forest_romanian",["minecraft:is_birch_fores","minecraft:is_old_growth_birch_forest"])
-event.add("towns_and_towers:has_structure/village_deep_oceans_ships",["minecraft:is_deep_ocean"])
-//event.add("towns_and_towers:has_structure/village_flower_forest_japanese",["minecraft:is_cherry_grov","minecraft:is_flower_forest"])
-//event.add("towns_and_towers:has_structure/village_forest_ruins",["minecraft:is_forest"])
-//event.add("towns_and_towers:has_structure/village_grove_villager_outpost",["minecraft:is_grove"])
-//event.add("towns_and_towers:has_structure/village_jungle_tribal",["minecraft:is_jungle"])
-//event.add("towns_and_towers:has_structure/village_meadow_swiss",["minecraft:is_meadow"])
-//event.add("towns_and_towers:has_structure/village_mushroom_fields_fantasy",["minecraft:is_mushroom_fields"])
-//event.add("towns_and_towers:has_structure/village_old_growth_taiga_polish",["minecraft:is_old_growth_pine_taig","minecraft:is_old_growth_spruce_taiga"])
-//event.add("towns_and_towers:has_structure/village_savanna_plateau_ramshackled",["minecraft:is_savanna_plateau"])
-//event.add("towns_and_towers:has_structure/village_snowy_slopes_inn",["minecraft:is_snowy_slopes"])
-//event.add("towns_and_towers:has_structure/village_snowy_taiga_viking",["minecraft:is_snowy_taiga"])
-//event.add("towns_and_towers:has_structure/village_sparse_jungle_polynesian",["minecraft:is_sparse_jungle"])
-//event.add("towns_and_towers:has_structure/village_sunflower_plains_farm",["minecraft:is_sunflower_plains"])
-event.add("towns_and_towers:has_structure/village_swamp_boat",["minecraft:is_lowland"])
-//event.add("towns_and_towers:has_structure/village_wooded_badlands_tipi",["minecraft:is_wooded_badlands"])
+    event.add("minecraft:has_closer_water_fog",["tfc:lowlands"]) */
 
 
 
-event.add("forge:is_water",["tfc:river","tfc:ocean","tfc:ocean_reef","tfc:deep_ocean","tfc:deep_ocean_trench","sgjourney:lantean_deep_ocean"])
+event.add("forge:is_water",["tfc:river","tfc:ocean","tfc:ocean_reef","tfc:deep_ocean","tfc:deep_ocean_trench"])
 
 })
-BlockEvents.rightClicked(event => {
-    let item = event.item
-    let block = event.block
-    if (item.hasTag("tfc:axes_that_log") && block.hasTag('minecraft:logs') && !block.hasTag('forge:stripped_logs')) {
-    block.popItem('farmersdelight:tree_bark')
-    }
-  })
 
-BlockEvents.rightClicked('block.right_click', event => {
-    const { player, hand, item} = event;
-    if (hand != 'MAIN_HAND') return;
-    if (!item.hasNBT()) return;
-    if ((item.id == 'firmalife:beehive_frame') && item.getNbtString().includes('queen:1')) {
-        item.count--
-        event.player.tell("The frame broke while freeing the queen");
-        let mob = event.block.up.createEntity('minecraft:bee')
-        mob.spawn()
-}
-})
 
-TFCEvents.limitContainer('minecraft:generic_9x3', event => {
-    event.limit('large')
-})
-TFCEvents.limitContainer('minecraft:generic_9x6', event => {
-    event.limit('large')
-})
-
-TFCEvents.data(event => {
-    event.fuel('embers:ember_crystal_cluster', 1600, 16000, 1)
-    event.fuel('embers:ember_grit', 1200, 300, 1)
-})
 ServerEvents.tags('item', event => {
-event.add('tfc:forge_fuel',['embers:ember_crystal_cluster','embers:ember_grit'])
-event.add('tfc:blast_furnace_fuel',['embers:ember_crystal_cluster','embers:ember_grit'])
-event.add('tfc:blast_furnace_fuel','embers:ember_crystal_cluster')
 event.add('tfc:blast_furnace_fuel','#forge:coal_coke')
 event.add('tfc:redstone_ore',['tfc:ore/cryolite','tfc:ore/cinnabar'])
 
@@ -262,7 +169,7 @@ ServerEvents.tags('block', event => {
     event.add("tfc:forge_insulation",["#minecraft:stone_bricks"])
     event.add("tfc:forge_insulation",["embers:caminite_bricks","embers:caminite_large_bricks","embers:caminite_large_tile","embers:caminite_tiles","embers:archaic_bricks","embers:archaic_edge","embers:archaic_tile","embers:archaic_large_bricks","embers:ashen_stone","embers:ashen_brick","embers:ashen_tile"])
     event.add("tfc:forge_invisible_whitelist",["#quark:hollow_logs"])    
-    event.add("tfc:forge_invisible_whitelist",["sootychimneys:brick_chimney","sootychimneys:dirty_brick_chimney","sootychimneys:cobblestone_chimney","sootychimneys:dirty_cobblestone_chimney","sootychimneys:stone_brick_chimney","sootychimneys:dirty_stone_brick_chimney","sootychimneys:mud_brick_chimney","sootychimneys:dirty_mud_brick_chimney","sootychimneys:iron_chimney","sootychimneys:dirty_iron_chimney","sootychimneys:copper_chimney","sootychimneys:dirty_copper_chimney","sootychimneys:terracotta_chimney","sootychimneys:dirty_terracotta_chimney","quark:chute","minecraft:hopper","create:chute","immersiveengineering:chute_iron","immersiveengineering:chute_steel","immersiveengineering:chute_aluminum","immersiveengineering:chute_copper"])
+    event.add("tfc:forge_invisible_whitelist",["quark:chute","minecraft:hopper","create:chute","immersiveengineering:chute_iron","immersiveengineering:chute_steel","immersiveengineering:chute_aluminum","immersiveengineering:chute_copper"])
 })
 
 ServerEvents.tags('fluid', event => {

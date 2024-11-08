@@ -10,31 +10,28 @@ import crafttweaker.api.tag.manager.ITagManager;
 import crafttweaker.api.bracket.BracketHandlers;
 import mods.jeitweaker.Jei;
 
-craftingTable.removeByName("create:crafting/kinetics/basin");
-craftingTable.removeByRegex("createcasing:crafting/shafts*");
+//craftingTable.removeByName("create:crafting/kinetics/basin");
 
+/*
 craftingTable.remove(<item:steampowered:bronze_boiler>);
 craftingTable.remove(<item:steampowered:bronze_burner>);
 craftingTable.remove(<item:steampowered:cast_iron_boiler>);
 craftingTable.remove(<item:steampowered:cast_iron_burner>);
 craftingTable.remove(<item:steampowered:steel_boiler>);
 craftingTable.remove(<item:steampowered:steel_burner>);
-<recipetype:minecraft:smelting>.remove(<item:tfmg:fireproof_brick>);
-
-
-<recipetype:tfmg:polarizing>.remove(<item:tfmg:magnetic_ingot>);
+*/
 
 craftingTable.remove(<item:create:large_water_wheel>);
 craftingTable.addShaped("handcrafted_create_large_watermill", <item:create:large_water_wheel>,[
-    [<tag:items:tfc:lumber>,<tag:items:minecraft:planks>,<tag:items:tfc:lumber>],
-    [<tag:items:minecraft:planks>,<item:create:shaft>,<tag:items:minecraft:planks>],
-    [<tag:items:tfc:lumber>,<tag:items:minecraft:planks>,<tag:items:tfc:lumber>]]);    
+    [<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:waterwheel_segment>],
+    [<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:component_steel>,<item:immersiveengineering:waterwheel_segment>],
+    [<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:waterwheel_segment>]]);
 
 craftingTable.remove(<item:create:water_wheel>);
 craftingTable.addShaped("handcrafted_create_watermill", <item:create:water_wheel>,[
-    [<tag:items:tfc:lumber>,<tag:items:tfc:lumber>,<tag:items:tfc:lumber>],
-    [<tag:items:tfc:lumber>,<item:create:shaft>,<tag:items:tfc:lumber>],
-    [<tag:items:tfc:lumber>,<tag:items:tfc:lumber>,<tag:items:tfc:lumber>]]);    
+    [<item:minecraft:air>,<item:immersiveengineering:waterwheel_segment>,<item:minecraft:air>],
+    [<item:immersiveengineering:waterwheel_segment>,<item:immersiveengineering:component_iron>,<item:immersiveengineering:waterwheel_segment>],
+    [<item:minecraft:air>,<item:immersiveengineering:waterwheel_segment>,<item:minecraft:air>]]);
 
 
 craftingTable.remove(<item:create:brass_hand>);
@@ -54,7 +51,7 @@ craftingTable.remove(<item:create:brass_hand>);
   ]
 }
 );
-
+/*
 <recipetype:create:compacting>.addJsonRecipe("magnetic_ingot", {
   "type": "create:compacting",
   "ingredients": [
@@ -125,13 +122,13 @@ craftingTable.remove(<item:create:brass_hand>);
     }
   ]
 });
-
+*/
 
 craftingTable.remove(<item:createaddition:alternator>);
 craftingTable.addShaped("handcrafted_alternator_dynamo", <item:createaddition:alternator>,[
-    [<tag:items:forge:sheets/steel>,<item:immersiveengineering:dynamo>,<tag:items:forge:sheets/steel>],
-    [<item:immersiveengineering:dynamo>,<item:immersiveengineering:capacitor_lv>,<item:immersiveengineering:dynamo>],
-    [<tag:items:forge:sheets/steel>,<item:immersiveengineering:dynamo>,<tag:items:forge:sheets/steel>]]);          
+    [<tag:items:forge:sheets/steel>,<item:alexscaves:scarlet_magnet>,<tag:items:forge:sheets/steel>],
+    [<item:alexscaves:azure_magnet>,<item:alexscaves:resistor_shield>,<item:alexscaves:azure_magnet>],
+    [<tag:items:forge:sheets/steel>,<item:alexscaves:scarlet_magnet>,<tag:items:forge:sheets/steel>]]);
 
 
 craftingTable.remove(<item:create:belt_connector>);

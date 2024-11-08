@@ -1,0 +1,4 @@
+#Time (ms) spent sleeping during startup to guarantee LA's event is executed last
+#Range: 500 ~ 60000
+time_to_sleep = 1000
+

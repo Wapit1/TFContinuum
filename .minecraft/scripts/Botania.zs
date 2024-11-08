@@ -43,7 +43,7 @@ craftingTable.addShaped("handcrafted_apothecary_mossy", <item:botania:apothecary
 craftingTable.remove(<item:botania:mana_spreader>);
 craftingTable.addShaped("handcrafted_mana_spreader", <item:botania:mana_spreader>, [
     [<tag:items:botania:livingwood_logs>,<tag:items:botania:livingwood_logs>,<tag:items:botania:livingwood_logs>],
-    [<item:railcraft:gold_electrode>,<tag:items:botania:petals>,<item:aether:golden_ring>],
+    [<item:firmaciv:copper_bolt>,<tag:items:botania:petals>,],
     [<tag:items:botania:livingwood_logs>,<tag:items:botania:livingwood_logs>,<tag:items:botania:livingwood_logs>]]);
 
 <recipetype:botania:mana_infusion>.remove(<item:botania:manasteel_ingot>);
@@ -204,7 +204,28 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
 
 <recipetype:botania:runic_altar>.removeAll();
 
-
+<recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_water", {
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "tag": "botania:mana_dusts"
+    },
+    {
+      "tag": "botania:manasteel_ingots"
+    },
+    {
+      "item": "firmalife:watering_can"
+    },
+    {
+      "tag": "minecraft:kelp"
+    }
+  ],
+  "mana": 5200,
+  "output": {
+    "count": 2,
+    "item": "botania:rune_water"
+  }
+});
 
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_air", {
   "type": "botania:runic_altar",
@@ -289,27 +310,6 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
   }
 });
 
-<recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_envy", {
-  "type": "botania:runic_altar",
-  "ingredients": [
-    {
-      "tag": "botania:mana_diamond_gems"
-    },
-    {
-      "item": "botania:rune_winter"
-    },
-    {
-      "item": "botania:rune_water"
-    },
-    {
-      "item": "minecraft:weathered_copper"
-    }
-  ],
-  "mana": 12000,
-  "output": {
-    "item": "botania:rune_envy"
-  }
-});
 
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_fire", {
   "type": "botania:runic_altar",
@@ -321,7 +321,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:manasteel_ingots"
     },
     {
-      "tag": "minecraft:charcoal"
+      "tag": "tfc:blast_furnace_fuel"
     },
     {
       "tag": "forge:gunpowder"
@@ -337,6 +337,31 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
   }
 });
 
+<recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_envy", {
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "tag": "botania:mana_diamond_gems"
+    },
+    {
+      "item": "botania:rune_winter"
+    },
+    {
+      "item": "botania:rune_water"
+    },
+    {
+      "item": "tfc:gem/pyrite"
+    },
+    {
+      "item": "minecraft:sculk_vein"
+    },
+  ],
+  "mana": 12000,
+  "output": {
+    "item": "botania:rune_envy"
+  }
+});
+
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_gluttony", {
   "type": "botania:runic_altar",
   "ingredients": [
@@ -344,17 +369,11 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:mana_diamond_gems"
     },
     {
-      "tag": "botania:mana_diamond_gems"
+      "item": "firmalife:food/vanilla_ice_cream"
     },
     {
-      "tag": "tfc:foods"
+      "item": "firmalife:food/cooked_pizza"
     },
-    {
-      "tag": "tfc:foods"
-    },    
-    {
-      "tag": "tfc:foods"
-    },                
     {
       "item": "botania:rune_winter"
     },
@@ -371,6 +390,9 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_greed", {
   "type": "botania:runic_altar",
   "ingredients": [
+    {
+      "tag": "botania:mana_diamond_gems"
+    },
     {
       "tag": "botania:mana_diamond_gems"
     },
@@ -396,34 +418,10 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
   }
 });
 
-<recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_head", {
-  "type": "botania:runic_altar_head",
-  "ingredients": [
-    {
-      "item": "minecraft:skeleton_skull"
-    },
-    {
-      "item": "tombstone:grave_dust"
-    },
-    {
-      "item": "minecraft:name_tag"
-    },
-    {
-      "item": "sgjourney:golden_idol"
-    }
-  ],
-  "mana": 22500,
-  "output": {
-    "item": "minecraft:player_head"
-  }
-});
 
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_lust", {
   "type": "botania:runic_altar",
   "ingredients": [
-    {
-      "tag": "botania:mana_diamond_gems"
-    },
     {
       "tag": "botania:mana_diamond_gems"
     },
@@ -437,7 +435,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "item": "minecraft:lead"
     },   
     {
-      "item": "iceandfire:blindfold"
+      "tag": "tfcchannelcasting:foods/chocolate_heart"
     }
   ],
   "mana": 12000,
@@ -464,12 +462,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
     {
       "tag": "botania:manasteel_ingots"
     },
-    {
-      "item": "botania:mana_pearl"
-    },
-    {
-      "item": "botania:mana_bottle"
-    }
+
   ],
   "mana": 8000,
   "output": {
@@ -490,26 +483,11 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "item": "botania:rune_fire"
     },
     {
-      "tag": "forge:dyes/red"
+      "item": "magistuarmory:crown_decoration"
     },
     {
-      "tag": "forge:dyes/orange"
-    },   
-    {
-      "tag": "forge:dyes/yellow"
+      "item": "embers:cinder_staff"
     },
-    {
-      "tag": "forge:dyes/green"
-    },
-    {
-      "tag": "forge:dyes/blue"
-    },
-    {
-      "tag": "forge:dyes/purple"
-    },
-    {
-      "tag": "forge:dyes/pink"
-    }
   ],
   "mana": 12000,
   "output": {
@@ -524,13 +502,13 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:mana_diamond_gems"
     },
     {
-      "tag": "botania:mana_diamond_gems"
-    },
-    {
       "item": "botania:rune_autumn"
     },
     {
       "item": "botania:rune_air"
+    },
+    {
+      "item": "tis3d:display_module"
     },
     {
       "tag": "minecraft:beds"
@@ -598,28 +576,7 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
   }
 });
 
-<recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_water", {
-  "type": "botania:runic_altar",
-  "ingredients": [
-    {
-      "tag": "botania:mana_dusts"
-    },
-    {
-      "tag": "botania:manasteel_ingots"
-    },
-    {
-      "item": "firmalife:watering_can"
-    },
-    {
-      "tag": "minecraft:kelp"
-    }
-  ],
-  "mana": 5200,
-  "output": {
-    "count": 2,
-    "item": "botania:rune_water"
-  }
-});
+
 
 <recipetype:botania:runic_altar>.addJsonRecipe("runic_altar_rune_winter", {
   "type": "botania:runic_altar",
@@ -632,12 +589,6 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
     },
     {
       "item": "minecraft:snow_block"
-    },
-    {
-      "item": "minecraft:snow_block"
-    },
-    {
-      "tag": "minecraft:wool"
     },
     {
       "tag": "minecraft:wool"
@@ -659,22 +610,19 @@ craftingTable.addShaped("handcrafted_mana_sword", <item:botania:manasteel_sword>
       "tag": "botania:mana_diamond_gems"
     },
     {
-      "tag": "botania:mana_diamond_gems"
-    },
-    {
       "item": "botania:rune_winter"
     },
     {
       "item": "botania:rune_earth"
     },
     {
-      "tag": "tfc:javelins"
+      "item": "immersiveengineering:armor_piercing"
     },
     {
-      "tag": "tfc:swords"
+      "item": "minecraft:blaze_powder"
     },
     {
-      "item": "botania:cosmetic_eyepatch"
+      "item": "galosphere:silver_bomb"
     }
   ],
   "mana": 12000,

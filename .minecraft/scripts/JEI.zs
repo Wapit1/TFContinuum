@@ -11,9 +11,5 @@ import crafttweaker.api.bracket.BracketHandlers;
 import crafttweaker.api.text.Component;
 import mods.jeitweaker.Jei;
 
-Jei.addIngredientInformation(<item:firmalife:beehive_frame>, Component.literal("Right Clicking a Frame with a Queen will set it free!"));
-Jei.addIngredientInformation(<item:farmersdelight:tree_bark>, Component.literal("Stripping Logs will drop Bark"));
+Jei.addIngredientInformation(<item:firmalife:beehive_frame>, Component.literal("Oh no not the bees"));
 
-<recipetype:jumbofurnace:jumbo_smelting>.removeAll();
-Jei.hideCategory(<resource:jumbofurnace:jumbo_smelting>);
-Jei.hideCategory(<resource:jumbofurnace:jumbo_furnace_upgrade>);

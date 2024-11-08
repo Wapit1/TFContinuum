@@ -44,6 +44,28 @@
       "bookmarks": [],
       "completedManualQuests": []
     },
+    "hexcasting:thehexbook": {
+      "viewedEntries": [
+        "hexcasting:basics/media",
+        "hexcasting:casting/mishaps2",
+        "hexcasting:casting/item_iotas",
+        "hexcasting:greatwork/quenching_allays",
+        "hexcasting:patterns/spells/blockworks",
+        "hexcasting:patterns/hextweaks_utility",
+        "hexcasting:patterns/everbook_entries",
+        "hexcasting:patterns/everbook",
+        "hexcasting:patterns/hexal_maths",
+        "hexcasting:patterns/numbers",
+        "hexcasting:patterns/hexal_basics",
+        "hexcasting:patterns/basics",
+        "hexcasting:patterns/advanced_math",
+        "hexcasting:patterns/logic",
+        "hexcasting:patterns/lists",
+        "hexcasting:basics/slipways"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    },
     "naturesaura:book": {
       "viewedEntries": [
         "naturesaura:practices/aura_plants",
@@ -133,6 +155,17 @@
         "naturesaura:creating/animal_generator",
         "naturesaura:using/field_creator",
         "naturesaura:items/outpost_finder"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    },
+    "buildinggadgets2:buildinggadgets2book": {
+      "viewedEntries": [
+        "buildinggadgets2:basics",
+        "buildinggadgets2:mech_anchor",
+        "buildinggadgets2:cutpaste",
+        "buildinggadgets2:buildinggadget",
+        "buildinggadgets2:destruction"
       ],
       "bookmarks": [],
       "completedManualQuests": []
@@ -362,7 +395,15 @@
         "botania:alfhomancy/thor_ring",
         "botania:alfhomancy/gaia_ritual_hardmode",
         "botania:alfhomancy/infinite_fruit",
-        "botania:alfhomancy/odin_ring"
+        "botania:alfhomancy/odin_ring",
+        "botania:alfheim/alfheim_landscape",
+        "botania:alfheim/andwari",
+        "botania:alfheim/alfheim_resources",
+        "botania:alfheim/kvasir",
+        "botania:mythic_botany/manaband",
+        "botania:mythic_botany/rings",
+        "botania:mythic_botany/generating",
+        "botania:mythic_botany/runes"
       ],
       "bookmarks": [],
       "completedManualQuests": []
@@ -435,7 +476,24 @@
         "tfc:mechanics/decay",
         "tfc:artisanal/soap",
         "tfc:bsa/sinew_processing",
-        "tfc:mechanics/blast_furnace"
+        "tfc:mechanics/blast_furnace",
+        "tfc:sns/item_containers"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    },
+    "dimdungeons:guide_book": {
+      "viewedEntries": [
+        "dimdungeons:introduction",
+        "dimdungeons:simple_advice",
+        "dimdungeons:basic_keys",
+        "dimdungeons:basic_portals",
+        "dimdungeons:advanced_portals",
+        "dimdungeons:personal_portals",
+        "dimdungeons:artifact_key_charger",
+        "dimdungeons:artifact_personal_dimension_key",
+        "dimdungeons:artifact_homeward_pearl",
+        "dimdungeons:advanced_keys"
       ],
       "bookmarks": [],
       "completedManualQuests": []

@@ -20,7 +20,6 @@ import crafttweaker.api.bracket.BracketHandlers;
 
 import stdlib.List;
 
-<entitytype:aether:aerbunny>.addLootModifier("drop_rabbit_foot", CommonLootModifiers.addWithChance(<item:minecraft:rabbit_foot> % 25));
 
 loot.modifiers.register(
     "village_toolsmith_fire_clay",
@@ -58,5 +57,4 @@ replaceLootItems(<item:minecraft:iron_axe>,<item:tfc:metal/axe_head/copper>);
 replaceLootItems(<item:minecraft:iron_hoe>,<item:tfc:metal/hoe_head/copper>);
 replaceLootItems(<item:minecraft:iron_sword>,<item:tfc:metal/knife_blade/copper>);
 
-replaceLootItems(<item:iceandfire:silver_ingot>,<item:tfc:metal/ingot/silver>);
 replaceLootItems(<item:minecraft:gold_ingot>,<item:tfc:metal/ingot/gold>);

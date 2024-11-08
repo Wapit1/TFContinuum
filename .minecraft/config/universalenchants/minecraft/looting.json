@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "items": [
+    "$minecraft:weapon",
+    "botania:elementium_axe",
+    "mythicbotany:mjoellnir",
+    "embers:clockwork_pickaxe",
+    "embers:clockwork_axe",
+    "embers:grandhammer",
+    "create:potato_cannon",
+    "$minecraft:universal_enchants_axe",
+    "$minecraft:trident",
+    "$minecraft:bow",
+    "$minecraft:crossbow"
+  ],
+  "incompatible": [
+    "minecraft:silk_touch"
+  ]
+}

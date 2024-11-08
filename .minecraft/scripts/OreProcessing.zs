@@ -10,15 +10,13 @@ import crafttweaker.api.tag.manager.ITagManager;
 import crafttweaker.api.bracket.BracketHandlers;
 import mods.jeitweaker.Jei;
 
-<recipetype:railcraft:rolling>.remove(<tag:items:forge:plates>);
+
 <recipetype:create:pressing>.remove(<tag:items:forge:plates>);
 <recipetype:create:pressing>.remove(<item:createdeco:zinc_sheet>);
 
 <recipetype:embers:stamping>.removeAll();
 <recipetype:immersiveengineering:alloy>.removeAll();
 <recipetype:embers:mixing>.removeAll();
-<recipetype:railcraft:blasting>.removeAll();
-<recipetype:railcraft:crushing>.removeAll();
 <recipetype:minecraft:campfire_cooking>.removeAll();
 <recipetype:minecraft:smoking>.removeAll();
 <recipetype:immersiveengineering:blast_furnace>.removeAll();
@@ -39,11 +37,7 @@ craftingTable.remove(<tag:items:forge:wires>);
 
 //<recipetype:create_dd:superheating>.remove(<tag:items:forge:ingots>);
 
-<recipetype:minecraft:blasting>.remove(<item:sgjourney:pure_naquadah>);
 
-<recipetype:railcraft:coking>.removeAll();
-<recipetype:tfmg:coking>.removeAll();
-<recipetype:tfmg:casting>.removeAll();
 
 <recipetype:immersiveengineering:crusher>.removeByModid("tfc_ie_addon");
 <recipetype:minecraft:smelting>.removeByModid("woodencog");
@@ -55,8 +49,6 @@ craftingTable.remove(<tag:items:forge:wires>);
 <recipetype:create:cutting>.remove(<item:tfc:metal/ingot/wrought_iron>);
 <recipetype:create:cutting>.remove(<item:tfc:refined_iron_bloom>);
 <recipetype:embers:melting>.removeAll();
-
-<recipetype:create:compacting>.remove(<fluid:northstar:hydrocarbon>);
 
 <recipetype:create:sequenced_assembly>.remove(<item:vintageimprovements:pig_iron_sheet>);
 
@@ -79,23 +71,7 @@ craftingTable.addShaped("handcrafted_iron_block_wrought_iron_ingot", <item:minec
     [<item:tfc:metal/ingot/wrought_iron>,<item:tfc:metal/ingot/wrought_iron>,<item:tfc:metal/ingot/wrought_iron>]]);  
 
 
-//craftingTable.removeByName("betterend:thallasium_ingot_from_nuggets");
-//craftingTable.removeByName("betternether:cincinnasite_ingot");
 
-
-craftingTable.removeByName("railcraft:bronze_ingot_crafted_with_ingots");
-craftingTable.removeByName("railcraft:bronze_ingot_from_bronze_nugget");
-craftingTable.removeByName("railcraft:bronze_ingot");
-//craftingTable.removeByName("railcraft:bronze_block_from_bronze_ingot");
-craftingTable.removeByName("railcraft:brass_ingot_crafted_with_ingots");
-//craftingTable.removeByName("railcraft:brass_ingot_from_brass_nugget");
-//craftingTable.removeByName("railcraft:brass_ingot");
-//craftingTable.removeByName("railcraft:brass_block_from_brass_ingot");
-//craftingTable.removeByName("railcraft:zinc_ingot_from_zinc_nugget");
-//craftingTable.removeByName("railcraft:zinc_ingot");
-//craftingTable.removeByName("railcraft:zinc_block_from_zinc_ingot");
-
-//<recipetype:create:compacting>.removeByName("create_dd:compacting/steel_ingot");
 
 <recipetype:immersiveengineering:arc_furnace>.removeByName("immersiveengineering:arcfurnace/steel");
 //<recipetype:immersiveengineering:arc_furnace>.removeByName("tfc_ie_addon:arc_furnace/steel");
@@ -130,17 +106,9 @@ craftingTable.removeByName("railcraft:brass_ingot_crafted_with_ingots");
 <item:immersiveengineering:nugget_constantan>
 <item:immersiveengineering:nugget_electrum>
 <item:immersiveengineering:nugget_steel>
-<item:railcraft:tin_nugget>
-<item:railcraft:bronze_nugget>
-<item:railcraft:invar_nugget>
-<item:sgjourney:naquadah_alloy_nugget>
 <item:createdeco:netherite_nugget>
 <item:createdeco:industrial_iron_nugget>
 <item:vintageimprovements:vanadium_nugget>
-<item:aether_redux:veridium_nugget>
-<item:northstar:tungsten_nugget>
-<item:betterend:thallasium_nugget>
-<item:betterend:terminite_nugget>
 <item:create:experience_nugget>
 */
 
@@ -206,13 +174,13 @@ craftingTable.remove(<item:immersiveengineering:redstone_acid_bucket>);
 	"ingredients": [ 
     {
 			"fluid": "immersiveengineering:redstone_acid",
-			"amount": 100
+			"amount": 250
 		}
 	],
 	"results": [
 		{
     "item": "minecraft:redstone",
-    "count": 16
+    "count": 8
 		}
 	],
 	"processingTime": 600
@@ -226,7 +194,7 @@ craftingTable.remove(<item:immersiveengineering:redstone_acid_bucket>);
 		"tag": "tfc:redstone_ore"
     },
     {
-      "fluid": "northstar:sulfuric_acid",
+      "fluid": "vintageimprovements:sulfuric_acid",
       "amount": 250
     }
   ],
@@ -350,13 +318,6 @@ function addEmbersStamping(fluidIn as IFluidStack, itemOut as IItemStack, itemSt
 addEmbersStamping(<fluid:tfc:metal/gold>,<item:minecraft:bell>,<item:tfc:ceramic/bell_mold>);
 addEmbersStamping(<fluid:tfc:metal/bronze>,<item:tfc:bronze_bell>,<item:tfc:ceramic/bell_mold>);
 addEmbersStamping(<fluid:tfc:metal/brass>,<item:tfc:brass_bell>,<item:tfc:ceramic/bell_mold>);
-
-//AE2 Press Plates
-
-addEmbersStamping(<fluid:tfc:metal/wrought_iron>,<item:ae2:calculation_processor_press>,<item:kubejs:fired_material_calculation_processor_press>);
-addEmbersStamping(<fluid:tfc:metal/wrought_iron>,<item:ae2:engineering_processor_press>,<item:kubejs:fired_material_engineering_processor_press>);
-addEmbersStamping(<fluid:tfc:metal/wrought_iron>,<item:ae2:logic_processor_press>,<item:kubejs:fired_material_logic_processor_press>);
-addEmbersStamping(<fluid:tfc:metal/wrought_iron>,<item:ae2:silicon_press>,<item:kubejs:fired_material_silicon_press>);
 
 //print((<item:tfc:ore/small_native_copper> as IData).getAsString());
 
@@ -607,6 +568,7 @@ addcreatemetallurgymelting("tfc:metal/cast_iron","tfc:ore/rich_limonite",35);
 addcreatemetallurgymelting("tfc:metal/zinc","tfc:ore/rich_sphalerite",35);
 addcreatemetallurgymelting("tfc:metal/copper","tfc:ore/rich_tetrahedrite",35);
                     //==================================================
+/*
 addEmbersmelting("tfc:metal/gold","create:crushed_raw_gold",5);
 addEmbersmelting("tfc:metal/copper","create:crushed_raw_copper",5);
 addEmbersmelting("tfc:metal/zinc","create:crushed_raw_zinc",5);
@@ -615,7 +577,7 @@ addEmbersmelting("tfc:metal/tin","create:crushed_raw_tin",5);
 addEmbersmelting("tfc_ie_addon:metal/lead","create:crushed_raw_lead",5);
 //addEmbersmelting("tfc_ie_addon:metal/aluminum","create:crushed_raw_aluminum",5);
 //addEmbersmelting("tfc_ie_addon:metal/uranium","create:crushed_raw_uranium",5);
-addEmbersmelting("tfc:metal/nickel","create:crushed_raw_nickel",5);
+addEmbersmelting("tfc:metal/nickel","create:crushed_raw_nickel",5); */
 
 addEmbersmelting("tfc:metal/copper","tfc:ore/small_native_copper",10);
 addEmbersmelting("tfc:metal/gold","tfc:ore/small_native_gold",10);
@@ -694,34 +656,6 @@ addEmbersmelting("tfc:metal/copper","tfc:ore/rich_tetrahedrite",35);
   "energy": 204800
 });
 
-<recipetype:embers:melting>.addJsonRecipe("embers_wrought_iron_from_crushed_bonus_smelting", {
-  "type": "embers:melting",
-  "bonus": {
-    "amount": 1,
-    "fluid": "tfc:metal/wrought_iron"
-  },
-  "input": {
-    "item": "create:crushed_raw_iron"
-  },
-  "output": {
-    "amount": 5,
-    "fluid": "tfc:metal/cast_iron"
-  }
-});
-<recipetype:embers:melting>.addJsonRecipe("embers_wrought_iron_from_bloom_bonus_smelting", {
-  "type": "embers:melting",
-  "bonus": {
-    "amount": 25,
-    "fluid": "tfc:metal/wrought_iron"
-  },
-  "input": {
-    "item": "tfc:raw_iron_bloom"
-  },
-  "output": {
-    "amount": 75,
-    "fluid": "tfmg:molten_slag"
-  }
-});
 
 <recipetype:tfc:bloomery>.addJsonRecipe("wrought_iron_coke_bonus_smelting", {
   "type": "tfc:bloomery",
@@ -730,7 +664,7 @@ addEmbersmelting("tfc:metal/copper","tfc:ore/rich_tetrahedrite",35);
   },
   "fluid": {
     "ingredient": "tfc:metal/cast_iron",
-    "amount": 50
+    "amount": 100
   },
   "catalyst": {
     "ingredient": {
@@ -779,7 +713,7 @@ function addDustCleaning(ItemIn as string, ItemOut as string) as void {
   "heatRequirement": "superheated",
 	"ingredients": [ 
     {
-			"fluid": "northstar:sulfuric_acid",
+			"fluid": "vintageimprovements:sulfuric_acid",
 			"amount": 100
 		},
     {"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,},{"item": ItemIn,}
@@ -937,7 +871,7 @@ addEmbers2Mixing("sterling_silver", "copper", 3,"silver", 7);
 addEmbers3Mixing("bismuth_bronze", "bismuth", 1,"zinc", 3,"copper", 6);
 addEmbers3Mixing("black_bronze", "gold", 2,"silver", 2,"copper", 6);
 
-function addEmbers2MixingnonTFC(fluidOut as string, qtyU as int, fluidIn1 as string, qty1 as int, fluidIn2 as string, qty2 as int) as void { 
+function addEmbers2MixingnonTFC(fluidOut as string, qtyU as int, fluidIn1 as string, qty1 as int, fluidIn2 as string, qty2 as int) as void {
 <recipetype:embers:mixing>.addJsonRecipe("embers_mix2_non_tfc"+ fluidOut.replace(":","_"), {
   "type": "embers:mixing",
   "inputs": [
@@ -957,47 +891,13 @@ function addEmbers2MixingnonTFC(fluidOut as string, qtyU as int, fluidIn1 as str
 });
 }
 
-addEmbers2MixingnonTFC("embers:molten_dawnstone", 10, "tfc:metal/gold", 5,"tfc:metal/copper", 5);
+addEmbers2MixingnonTFC("embers:molten_dawnstone", 10, "tfc:metal/copper", 2,"firmalife:metal/stainless_steel", 8);
 addEmbersStamping(<fluid:embers:molten_dawnstone>,<item:embers:dawnstone_ingot>,<item:tfc:ceramic/fire_ingot_mold>);
 
 
-/*
-<recipetype:pneumaticcraft:heat_frame_cooling>.addJsonRecipe("molten_slag_hardening", {
-  "type": "pneumaticcraft:heat_frame_cooling",
-  "bonus_output": {
-    "limit": 0.5,
-    "multiplier": 0.025
-  },
-  "input": {
-    "type": "pneumaticcraft:fluid",
-    "amount": 1000,
-    "fluid": "tfmg:molten_slag"
-  },
-  "max_temp": 273,
-  "result": {
-    "item": "immersiveengineering:slag_glass"
-  }
-});
-*/
-/*
-<recipetype:tfc:barrel_sealed>.addJsonRecipe("acetaldehyde_barrel_recipe_pneumaticcraft", {
-    "type": "tfc:barrel_sealed",
-    "input_item": {
-        "ingredient": {
-            "item": "tfc:powder/malachite"
-        }
-    },
-    "input_fluid": {
-        "ingredient": "pneumaticcraft:ethanol",
-        "amount": 500
-    },
-    "output_fluid": {
-        "fluid": "immersiveengineering:acetaldehyde",
-        "amount": 300
-    },
-    "duration": 8000
-});
-*/
+
+
+
 <recipetype:tfc:barrel_sealed>.addJsonRecipe("acetaldehyde_barrel_recipe_createdieselgenerators", {
     "type": "tfc:barrel_sealed",
     "input_item": {
@@ -1044,8 +944,6 @@ addEmbers2MixingnonTFC("immersiveengineering:phenolic_resin", 3, "immersiveengin
   "stamp": (<item:embers:plate_stamp> as IData)
 }
 );
-addEmbers2MixingnonTFC("kubejs:moltenredalloy",1,"tfc:metal/copper",1,"immersiveengineering:redstone_acid",4);
-addEmbersStamping(<fluid:kubejs:moltenredalloy>,<item:morered:red_alloy_ingot>,<item:embers:ingot_stamp>);
 
 //Bauxite/Aluminium - Bayer Process
 
@@ -1061,7 +959,7 @@ addOrecrushing("tfc_ie_addon:ore/rich_bauxite","tfc_ie_addon:ore/normal_bauxite"
 addIEOrecrushing("tfc_ie_addon:ore/poor_bauxite","tfc_ie_addon:ore/small_bauxite",2,0);
 addIEOrecrushing("tfc_ie_addon:ore/normal_bauxite","tfc_ie_addon:ore/small_bauxite",3,0.1);
 addIEOrecrushing("tfc_ie_addon:ore/rich_bauxite","tfc_ie_addon:ore/small_bauxite",4,0.5);
-/*
+
 <recipetype:pneumaticcraft:thermo_plant>.addJsonRecipe("bayer_process_sodium_aluminate", {
   "type": "pneumaticcraft:thermo_plant",
   "exothermic": false,
@@ -1083,7 +981,7 @@ addIEOrecrushing("tfc_ie_addon:ore/rich_bauxite","tfc_ie_addon:ore/small_bauxite
     "min_temp": 473
   }
 });
-*/
+
 <recipetype:createdieselgenerators:basin_fermenting>.addJsonRecipe("bayer_process_sodium_aluminate", {
   "type": "createdieselgenerators:basin_fermenting",
   "heatRequirement": "superheated",  
@@ -1216,58 +1114,26 @@ addIEOrecrushing("tfc_ie_addon:ore/rich_bauxite","tfc_ie_addon:ore/small_bauxite
 
 //Automated Steel
 
-<recipetype:create:mixing>.remove(<item:tfmg:blasting_mixture>);
-craftingTable.addShapeless("handcrafted_blasting_mixture", <item:tfmg:blasting_mixture>, [<tag:items:forge:dusts/iron>,<item:tfc:powder/flux>]);
-
-<recipetype:createdieselgenerators:basin_fermenting>.addJsonRecipe("ultra_high_high_carbon_steel_cooling", {
-  "type": "createdieselgenerators:basin_fermenting",
-  "heatRequirement": "heated",  
-  "ingredients": [
-    {
-      "fluid": "tfmg:molten_steel",
-      "amount": 333
-    }
-  ],
-  "processingTime": 800,
-  "results": [
-    {
-      "item": "immersiveengineering:slag",
-      "chance": 1.25
-    },
-    {
-      "fluid": "tfc:metal/high_carbon_steel",
-      "amount": 100
-    }
-  ]
-});
-
 <recipetype:vintageimprovements:vacuumizing>.addJsonRecipe("ultra_high_carbon_steel_steel", {
 	"type":"vintageimprovements:vacuumizing",
 	"secondaryFluidResults": 0,
 	"heatRequirement": "superheated",
 	"ingredients": [ 
 		{
-			"fluid": "tfmg:molten_steel",
-			"amount": 111
+			"fluid": "tfc:metal/pig_iron",
+			"amount": 100
 		},
 		{
-			"fluid": "northstar:liquid_oxygen",
-			"amount": 250
+			"fluid": "spelunkery:portal_fluid",
+			"amount": 100
 		},
 	],
 	"results": [
 		{
 			"fluid": "tfc:metal/steel",
-			"amount": 50
-		},
-    {
-			"fluid": "kubejs:liquid_carbon_solution",
-			"amount": 50
-		},
-    {
-			"fluid": "kubejs:waste",
 			"amount": 100
-		}
+		},
+
 	],
 	"processingTime": 400
 });
@@ -1278,48 +1144,24 @@ craftingTable.addShapeless("handcrafted_blasting_mixture", <item:tfmg:blasting_m
 	"heatRequirement": "superheated",
 	"ingredients": [ 
 		{
-			"fluid": "tfc:metal/pig_iron",
-			"amount": 200
+			"fluid": "tfc:metal/cast_iron",
+			"amount": 100
 		},
 		{
-			"fluid": "northstar:liquid_oxygen",
-			"amount": 250
+			"fluid": "spelunkery:portal_fluid",
+			"amount": 100
 		},
 	],
 	"results": [
 		{
-			"fluid": "tfc:metal/steel",
+			"fluid": "tfc:metal/wrought_iron",
 			"amount": 100
 		},
-    {
-			"fluid": "kubejs:liquid_carbon_solution",
-			"amount": 100
-		},
-    {
-			"fluid": "kubejs:waste",
-			"amount": 250
-		}
 	],
 	"processingTime": 400
 });
 
-<recipetype:vintageimprovements:vacuumizing>.addJsonRecipe("liquid_carbon_solution_blasting_fuel", {
-	"type":"vintageimprovements:vacuumizing",
-  "heatRequirement": "superheated",
-	"ingredients": [ 
-    {
-			"fluid": "kubejs:liquid_carbon_solution",
-			"amount": 100
-		}
-	],
-	"results": [
-		{
-			"item": "tfmg:coal_coke_dust",
-			"count": 1
-		}
-	],
-	"processingTime": 600
-});
+
 
 <recipetype:tfc:quern>.addJsonRecipe("coke_dust_to_powder", {
     "type": "tfc:quern",
@@ -1330,169 +1172,6 @@ craftingTable.addShapeless("handcrafted_blasting_mixture", <item:tfmg:blasting_m
         "item": "tfc:powder/coke",
         "count": 1
     }
-});
-
-<recipetype:vintageimprovements:pressurizing>.addJsonRecipe("hydrocarbon", {
-	"type":"vintageimprovements:pressurizing",
-	"secondaryFluidResults": 0,
-	"heatRequirement": "superheated",
-	"ingredients": [ 
-		{
-			"tag": "forge:dusts/coal_coke"
-		},
-		{
-			"fluid": "minecraft:water",
-			"amount": 250
-		},
-	],
-	"results": [
-
-    {
-			"fluid": "northstar:hydrocarbon",
-			"amount": 100
-		}
-	],
-	"processingTime": 400
-});
-
-<recipetype:vintageimprovements:vacuumizing>.addJsonRecipe("hydrocarbon_liquid_carbon_solution", {
-	"type":"vintageimprovements:vacuumizing",
-  "heatRequirement": "superheated",
-	"ingredients": [ 
-    {
-			"fluid": "northstar:hydrocarbon",
-			"amount": 100
-		}
-	],
-	"results": [
-		{
-			"fluid": "kubejs:liquid_carbon_solution",
-			"amount": 10
-		}
-	],
-	"processingTime": 600
-});
-
-//Naquadah 
-<recipetype:minecraft:crafting>.remove(<item:sgjourney:naquadah_rod>);
-<recipetype:minecraft:crafting>.remove(<item:sgjourney:naquadah_alloy>);
-
-addcreatemetallurgymelting("kubejs:molten_naquadah","sgjourney:raw_naquadah",100);
-
-<recipetype:vintageimprovements:centrifugation>.addJsonRecipe("naquadah_process", {
-	"type":"vintageimprovements:centrifugation",
-	"ingredients": [ 
-		{
-            "fluid": "kubejs:molten_naquadah",
-            "amount": 100
-		}
-	],
-	"results": [
-        {
-            "fluid": "sgjourney:liquid_naquadah",
-            "amount": 10
-        },
-        {
-            "fluid": "sgjourney:heavy_liquid_naquadah",
-            "amount": 100
-        }
-	],
-	"processingTime": 1000
-});
-
-<recipetype:createdieselgenerators:basin_fermenting>.addJsonRecipe("naquadah_process_pure_crystal", {
-  "type": "createdieselgenerators:basin_fermenting",
-  "heatRequirement": "heated",  
-  "ingredients": [
-    {
-      "fluid": "sgjourney:liquid_naquadah",
-      "amount": 100
-    }
-  ],
-  "processingTime": 800,
-  "results": [
-    {
-      "item": "sgjourney:pure_naquadah",
-      "chance": 0.25
-    },
-    {
-      "fluid": "tfmg:molten_slag",
-      "amount": 100
-    }
-  ]
-});
-
-<recipetype:vintageimprovements:pressurizing>.addJsonRecipe("naquadah_process_mettalic_liquid", {
-	"type":"vintageimprovements:pressurizing",
-	"ingredients": [ 
-		{
-			"fluid": "sgjourney:heavy_liquid_naquadah",
-			"amount": 100
-		},
-		{
-			"tag": "minecraft:soul_fire_base_blocks",
-		}
-	],
-	"results": [
-		{
-			"fluid": "kubejs:metallic_naquadah",
-			"amount": 100
-		}
-	],
-	"processingTime": 800
-});
-
-<recipetype:createdieselgenerators:basin_fermenting>.addJsonRecipe("naquadah_process_metal", {
-  "type": "createdieselgenerators:basin_fermenting",
-  "heatRequirement": "heated",  
-  "ingredients": [
-    {
-      "fluid": "kubejs:metallic_naquadah",
-      "amount": 100
-    }
-  ],
-  "processingTime": 800,
-  "results": [
-    {
-      "item": "sgjourney:naquadah_rod"
-    },
-    {
-      "fluid": "embers:soul_crude",
-      "amount": 100
-    }
-  ]
-});
-
-<recipetype:createaddition:rolling>.addJsonRecipe("naquadah_rolled_rod_2_sheet", {
-	"type":"createaddition:rolling",
-	"input": {
-      	"item": "sgjourney:naquadah_rod"
-	},
-	"result": {
-		"item": "kubejs:naquadah_sheet"
-	}
-});  
-
-<recipetype:railcraft:rolling>.addJsonRecipe("naquadah_alloy", {
-  "type": "railcraft:rolling",
-  "key": {
-    "n": {
-      "item": "kubejs:naquadah_sheet"
-    },
-    "o": {
-      "item": "northstar:tungsten_sheet"
-    }
-  },
-  "pattern": [
-    "nnn",
-    "ooo",
-    "nnn"
-  ],
-  "processTime": 100,
-  "result": {
-    "count": 16,
-    "item": "sgjourney:naquadah_alloy"
-  }
 });
 
 //Plates
@@ -1558,10 +1237,6 @@ craftingTable.remove(<item:${ItemOut}>);
 <item:immersiveengineering:plate_steel>
 <item:immersiveengineering:plate_iron>
 <item:immersiveengineering:plate_gold>
-<item:railcraft:tin_plate>
-<item:railcraft:zinc_plate>
-<item:railcraft:bronze_plate>
-<item:railcraft:invar_plate>
 <item:createaddition:zinc_sheet>
 <item:createdeco:andesite_sheet>
 <item:createdeco:zinc_sheet>
@@ -1581,60 +1256,4 @@ craftingTable.remove(<item:${ItemOut}>);
 
 
 
-/*
-
-//Liquid Catalyst
-#mods.tconstruct.Melting.addRecipe(<liquid:liquidcatalyst> * 4000,<botania:alchemycatalyst>, 350);
-
-//Redstone Alchemical Slurry
-mods.embers.Melter.remove(<liquid:alchemical_redstone>*1008);
-mods.embers.Melter.remove(<liquid:alchemical_redstone>*144);
-mods.embers.Melter.remove(<liquid:alchemical_redstone>*1296);
-
-mods.embers.Melter.add(<liquid:redstone>*144,<ore:dustRedstone>); 
-mods.embers.Melter.add(<liquid:redstone>*1296,<ore:blockRedstone>); 
-
-mods.pneumaticcraft.thermopneumaticprocessingplant.addRecipe(<liquid:pig_iron>*288, <tfc:powder/flux>, -0.75, 773.0, <liquid:steel>*144);
-
-    //Mechanical Metal Working
-
-    mods.immersiveengineering.MetalPress.addRecipe(<tfc:metal/ingot/high_carbon_steel>, <tfc:metal/ingot/pig_iron>*2, <contenttweaker:striking_die>, 2000);
-    mods.immersiveengineering.MetalPress.addRecipe(<tfc:metal/ingot/steel>, <tfc:metal/ingot/high_carbon_steel>*2, <contenttweaker:striking_die>, 2000);
-
-    mods.embers.DawnstoneAnvil.add([<tfc:metal/ingot/high_carbon_steel>],<tfc:metal/ingot/pig_iron>,<tfc:powder/flux>);
-    mods.embers.DawnstoneAnvil.add([<tfc:metal/ingot/steel>],<tfc:metal/ingot/high_carbon_steel>,<tfc:powder/flux>);
-
-//Sulfuric Acid
-
-mods.immersiveengineering.AlloySmelter.addRecipe(<contenttweaker:iron_sulfate>, <ore:oreIronSmall>, <ore:dustSulfur>, 2400);
-
-mods.pyrotech.StoneCrucible.addRecipe("Primtive_Sulfur_Trioxide",<liquid:sulfur_trioxide>*500,<contenttweaker:iron_sulfate>,2400,true);
-
-val fluidcontainers = [<tfc:wooden_bucket>,<minecraft:bucket>,<tfc:metal/bucket/red_steel>,<forestry:can>,<forestry:refractory>,<tfctech:ceramics/fluid_bowl>] as IItemStack[];
-for i, FC in fluidcontainers {
-mods.terrafirmacraft.Barrel.addRecipe("Primitive Sulfuric Acid"~i, FC.withTag({Fluid: {FluidName: "fresh_water", Amount: 1000}}), <liquid:sulfur_trioxide>*1000, FC, <liquid:sulfuric_acid>*1000, 4);
-}
-
-//Oxygen
-    mods.embers.Stamper.add(<contenttweaker:zeolite_powder>*4,<liquid:alumina>*144, <embers:stamp_flat>,<ore:sandSilica>); #zeolite
-    mods.immersiveengineering.AlloySmelter.addRecipe(<contenttweaker:zeolite_powder>, <ore:sandSilica>, <contenttweaker:bauxitedust>, 2400); #zeolite
-    recipes.addShapeless("Oxygen_can",<forestry:can:1>.withTag({Fluid: {FluidName: "oxygen", Amount: 1000}}), #oxygen
-    [<pneumaticcraft:air_canister:*>.transformDamage(1000),<contenttweaker:zeolite_powder>,<forestry:can>]);
-//Hydrochlroic Acid 
-    mods.embers.Mixer.add(<liquid:hydrogen_chloride>*1000, [<liquid:brine>*750,<liquid:sulfuric_acid>*500]);
-    mods.embers.Mixer.add(<liquid:hydrochloric_acid>*1000, [<liquid:hydrogen_chloride>*500,<liquid:distwater>*500]);
-//Chlroine 
-    mods.embers.Mixer.add(<liquid:chlorine>*1000, [<liquid:hydrogen_chloride>*1000,<liquid:oxygen>*500]);
-    #mods.nuclearcraft.electrolyser.addRecipe(<liquid:brine>*1000, <liquid:chlorine>*500, <liquid:hydrogen>*250, <liquid:sodium_hydroxide_solution>*500, null);
-//Rubber 
-
-furnace.remove(<thebetweenlands:items_misc:23>);
-furnace.remove(<thebetweenlands:syrmorite_bucket_solid_rubber>);
-mods.aether_legacy.Freezer.registerFreezable(<thebetweenlands:bl_bucket_rubber:1>,<thebetweenlands:syrmorite_bucket_solid_rubber>,800);
-mods.pneumaticcraft.heatframecooling.addRecipe(<thebetweenlands:bl_bucket_rubber:1>,<thebetweenlands:syrmorite_bucket_solid_rubber>);
-mods.cfm.Freezer.addRecipe(<thebetweenlands:bl_bucket_rubber:1>,<thebetweenlands:syrmorite_bucket_solid_rubber>);
-moretweaker.bewitchment.FrostFire.addRecipe(<thebetweenlands:syrmorite_bucket_solid_rubber>,<thebetweenlands:bl_bucket_rubber:1>);
-mods.cyclicmagic.Solidifier.addRecipe(<thebetweenlands:syrmorite_bucket_solid_rubber>, [<thebetweenlands:bl_bucket:1>.withTag({Fluid: {}})], "rubber", 1000);
-recipes.addShapeless(<thebetweenlands:syrmorite_bucket_solid_rubber>,[<thebetweenlands:bl_bucket_rubber:1>,<thermalfoundation:material:1025>]);
-*/
 

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "items": [
+    "$minecraft:armor"
+  ],
+  "incompatible": [
+    "enchanting_with_tfc:slashing_protection",
+    "enchanting_with_tfc:piercing_protection"
+  ]
+}

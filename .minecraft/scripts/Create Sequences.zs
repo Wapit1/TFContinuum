@@ -11,6 +11,7 @@ import crafttweaker.api.bracket.BracketHandlers;
 import mods.jeitweaker.Jei;
 import mods.create.SequencedAssemblyManager;
 
+/*
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("seq_winding_gears")
   .transitionTo(<item:tfc:brass_mechanisms>)
   .require(<item:tfc:brass_mechanisms>)
@@ -63,3 +64,4 @@ craftingTable.remove(<item:minecraft:clock>);
   .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:railcraft:steel_gear>))
   .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:railcraft:iron_gear>))     
   .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:firmalife:reinforced_glass>)));            
+*/

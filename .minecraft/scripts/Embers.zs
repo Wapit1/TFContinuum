@@ -39,8 +39,6 @@ craftingTable.addShaped("handcrafted_mechanical_core", <item:embers:mechanical_c
   [<item:createdieselgenerators:engine_piston>,<item:create:shaft>,<item:createdieselgenerators:engine_piston>],
   [<tag:items:forge:ingots/lead>,<tag:items:forge:wires/lead>,<tag:items:forge:ingots/lead>]]);      
 
-craftingTable.remove(<item:embers:ancient_codex>);
-craftingTable.addShapeless("handcrafted_ancient_codex", <item:embers:ancient_codex>, [<item:embers:caminite_plate>,<item:minecraft:book>,<item:tfc:powder/wood_ash>]);
 
 craftingTable.remove(<item:embers:superheater>); //Use Brass Springs if an Iron free method is created - coiling machine use sterling silver
 craftingTable.addShaped("handcrafted_superheater", <item:embers:superheater>,[
@@ -94,47 +92,15 @@ craftingTable.remove(<item:embers:resonating_bell>);
 	"processingTime": 800
 });
 
-craftingTable.remove(<item:embers:ember_dial>);
-craftingTable.addShaped("handcrafted_ember_dial", <item:embers:ember_dial>,[
-  [<item:ae2:crank>],
-  [<item:embers:caminite_plate>],
-  [<tag:items:forge:sheets/copper>]]);    
 
-craftingTable.remove(<item:embers:item_dial>);
-craftingTable.addShaped("handcrafted_item_dial", <item:embers:item_dial>,[
-  [<item:ae2:crank>],
-  [<item:embers:caminite_plate>],
-  [<tag:items:forge:sheets/lead>]]);  
 
-craftingTable.remove(<item:embers:fluid_dial>);
-craftingTable.addShaped("handcrafted_fluid_dial", <item:embers:fluid_dial>,[
-  [<item:ae2:crank>],
-  [<item:embers:caminite_plate>],
-  [<tag:items:forge:sheets/cast_iron>]]);        
 
-craftingTable.remove(<item:aetherworks:heat_dial>);
-craftingTable.addShaped("handcrafted_heat_dial", <item:aetherworks:heat_dial>,[
-  [<item:ae2:crank>],
-  [<item:embers:caminite_plate>],
-  [<tag:items:forge:sheets/bronze>]]);        
 
-craftingTable.remove(<item:embers:clockwork_attenuator>);
-craftingTable.addShaped("handcrafted_clockwork_attenuator", <item:embers:clockwork_attenuator>,[
-  [<item:ae2:crank>],
-  [<item:embers:caminite_plate>],
-  [<tag:items:forge:sheets/chromium>]]);     
 
-craftingTable.remove(<item:embers:atmospheric_gauge>);
-craftingTable.addShaped("handcrafted_atmospheric_gauge", <item:embers:atmospheric_gauge>,[
-  [<item:minecraft:air>,<item:ae2:crank>,<item:minecraft:air>],
-  [<item:firmaciv:copper_bolt>,<item:embers:archaic_circuit>,<item:firmaciv:copper_bolt>],
-  [<tag:items:forge:ingots/archaic_brick>,<tag:items:forge:ingots/archaic_brick>,<tag:items:forge:ingots/archaic_brick>]]);      
 
-craftingTable.remove(<item:embers:archaic_circuit>);
-craftingTable.addShaped("handcrafted_archaic_circuit", <item:embers:archaic_circuit>,[
-  [<tag:items:forge:ingots/archaic_brick>,<tag:items:forge:wires/lead>,<tag:items:forge:ingots/archaic_brick>],
-  [<tag:items:forge:wires/lead>,<item:embers:ancient_motive_core>,<tag:items:forge:wires/lead>],
-  [<tag:items:forge:ingots/archaic_brick>,<tag:items:forge:wires/lead>,<tag:items:forge:ingots/archaic_brick>]]);       
+
+
+
 
 craftingTable.remove(<item:embers:ashen_goggles>);
 craftingTable.addShaped("handcrafted_ashen_goggles", <item:embers:ashen_goggles>,[
@@ -145,13 +111,13 @@ craftingTable.addShaped("handcrafted_ashen_goggles", <item:embers:ashen_goggles>
 
 
 craftingTable.remove(<item:embers:item_pipe>);
-craftingTable.addShaped("handcrafted_item_pipe", <item:embers:item_pipe>*16,[
+craftingTable.addShaped("handcrafted_item_pipe", <item:embers:item_pipe>*8,[
   [<item:minecraft:air>,<tag:items:forge:sheets/lead>,<item:minecraft:air>],
   [<tag:items:forge:sheets/lead>,<item:minecraft:air>,<tag:items:forge:sheets/lead>],
   [<item:minecraft:air>,<tag:items:forge:sheets/lead>,<item:minecraft:air>]]);    
 
 craftingTable.remove(<item:embers:fluid_pipe>);
-craftingTable.addShaped("handcrafted_fluid_pipe", <item:embers:fluid_pipe>*16,[
+craftingTable.addShaped("handcrafted_fluid_pipe", <item:embers:fluid_pipe>*8,[
   [<item:minecraft:air>,<tag:items:forge:sheets/cast_iron>,<item:minecraft:air>],
   [<tag:items:forge:sheets/cast_iron>,<item:minecraft:air>,<tag:items:forge:sheets/cast_iron>],
   [<item:minecraft:air>,<tag:items:forge:sheets/cast_iron>,<item:minecraft:air>]]);    

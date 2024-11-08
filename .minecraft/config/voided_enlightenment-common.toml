@@ -1,0 +1,5 @@
+#Whether the nuclear bomb can be used.
+nuke_allowed = true
+#Whether ooze should be removed from the minecraft:water fluid tag.
+ooze_isnt_water = true
+

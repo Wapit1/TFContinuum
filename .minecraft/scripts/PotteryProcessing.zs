@@ -12,14 +12,11 @@ import mods.jeitweaker.Jei;
 
 craftingTable.addShapeless("andesite_alloy_lump_tin", <item:kubejs:andesite_alloy_raw> * 4, [<item:minecraft:clay>,<item:tfc:rock/gravel/andesite>,<item:tfc:powder/cassiterite>]);
 craftingTable.addShapeless("andesite_alloy_lump_zinc", <item:kubejs:andesite_alloy_raw> * 4, [<item:minecraft:clay>,<item:tfc:rock/gravel/andesite>,<item:tfc:powder/sphalerite>]);
+craftingTable.addShapeless("andesite_alloy_lump_tin", <item:kubejs:andesite_alloy_raw> * 2, [<item:minecraft:clay_ball>,<item:minecraft:clay_ball>,<tag:items:tfc:rock/gravel>,<item:tfc:powder/cassiterite>]);
+craftingTable.addShapeless("andesite_alloy_lump_zinc", <item:kubejs:andesite_alloy_raw> * 2, [<item:minecraft:clay_ball>,<item:minecraft:clay_ball>,<tag:items:tfc:rock/gravel>,<item:tfc:powder/sphalerite>]);
+
 craftingTable.remove(<item:create:andesite_alloy>);
 <recipetype:create:mixing>.remove(<item:create:andesite_alloy>);
-
-<recipetype:embers:alchemy>.remove(<item:embers:archaic_brick>);
-craftingTable.addShapeless("archaic_lump", <item:kubejs:unfired_archaic_lump> * 4, [<item:tfc:fire_clay_block>,<item:minecraft:soul_sand>,<item:tfc:powder/graphite>]);
-
-<recipetype:minecraft:smelting>.remove(<item:tfmg:fireclay_ball>);
-craftingTable.addShapeless("fire_infused_clay", <item:tfmg:fireclay_ball> * 4, [<item:tfc:fire_clay_block>,<item:minecraft:soul_sand>,<item:create:cinder_flour>]);
 
 craftingTable.remove(<item:embers:caminite_blend>);
 craftingTable.addShapeless("fire_caminite_blend", <item:embers:caminite_blend> * 4, [<tag:items:forge:storage_blocks/clay>,<item:minecraft:soul_sand>,<tag:items:forge:dusts/sulfur>]);
@@ -62,31 +59,6 @@ addTFCPotteryFire("kubejs:unfired_material_silicon_press","kubejs:fired_material
 addTFCPotteryFire("kubejs:unfired_archaic_lump","embers:archaic_brick");
 addTFCPotteryFire("embers:caminite_blend","embers:caminite_brick");
 
-addTFCPotteryFire("ae2:sky_dust","tfc:powder/graphite");
-<recipetype:tfc:quern>.addJsonRecipe("sky_dust_from_sky_stone", {
-    "type": "tfc:quern",
-    "ingredient": {
-        "item": "ae2:sky_stone_block"
-    },
-    "result": {
-        "item": "ae2:sky_dust",
-        "count": 1
-    }
-});
-
-//Glass
-/*
-<recipetype:tfc:heating>.addJsonRecipe("pottery_fire_dirty_glass", {
-  "type": "tfc:heating",
-  "ingredient": {
-    "tag": "forge:sand"
-  },
-  "result_item": {
-    "item": "quark:dirty_glass"
-  },
-  "temperature": 1399
-});
-*/
 
 <recipetype:immersiveengineering:arc_furnace>.addJsonRecipe("arc_furnace_dirty_glass", {
   "type": "immersiveengineering:arc_furnace",
@@ -105,45 +77,9 @@ addTFCPotteryFire("ae2:sky_dust","tfc:powder/graphite");
   "energy": 2048
 });
 
-<recipetype:create_optical:focusing>.addJsonRecipe("focusing_dirty_glass", {
-  "type": "create_optical:focusing",
-  "ingredients": [
-    {
-      "tag": "forge:glass"
-    },
-    {
-      "item": "supplementaries:soap"
-    }
-  ],
-  "processingTime": 50,
-  "required_beam_type": 2,
-  "results": [
-    {
-      "item": "minecraft:glass"
-    }
-  ]
-});
 
-var Dyes = ["white","red","orange","pink","yellow","lime","green","light_blue","cyan","blue","magenta","brown","gray","light_gray","black"];
-for dye in Dyes{
-<recipetype:create_optical:focusing>.addJsonRecipe("focusing_dyed_glass_"+ dye, {
-  "type": "create_optical:focusing",
-  "ingredients": [
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "tag": ("forge:dyes/" + dye)
-    }
-  ],
-  "processingTime": 50,
-  "required_beam_type": 3,
-  "results": [
-    {
-      "item": ("minecraft:" + dye + "_stained_glass")
-    }
-  ]
-});}
+
+
 
 <recipetype:minecraft:smelting>.remove(<item:embers:flat_stamp>);
 <recipetype:minecraft:smelting>.remove(<item:embers:ingot_stamp>);
@@ -156,7 +92,7 @@ addTFCPotteryFire("embers:raw_ingot_stamp","embers:ingot_stamp");
 addTFCPotteryFire("embers:raw_nugget_stamp","embers:nugget_stamp");
 addTFCPotteryFire("embers:raw_plate_stamp","embers:plate_stamp");
 addTFCPotteryFire("embers:raw_caminite_plate","embers:caminite_plate");
-addTFCPotteryFire("tfmg:fireclay_ball","tfmg:fireproof_brick");
+
 
 //mods.embers.Mixer.add(<liquid:red_alloy>*144, [<liquid:copper>*144,<liquid:redstone>*576]);
 

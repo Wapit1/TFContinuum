@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "items": [
+    "$minecraft:ranged_and_trident"
+  ],
+  "incompatible": [
+    "minecraft:riptide"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "items": [
+    "$minecraft:weapon",
+    "embers:clockwork_pickaxe",
+    "embers:clockwork_axe",
+    "embers:grandhammer",
+    "$minecraft:universal_enchants_axe",
+    "$minecraft:trident"
+  ],
+  "incompatible": [
+    "minecraft:impaling",
+    "minecraft:smite"
+  ]
+}
