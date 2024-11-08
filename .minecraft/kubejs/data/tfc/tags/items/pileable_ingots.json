@@ -2,6 +2,6 @@
     "replace": false,
     "values": [
         "embers:lead_ingot",
-        "createaddition:electrum_ingot",
+        "createaddition:electrum_ingot"
     ]
 }
